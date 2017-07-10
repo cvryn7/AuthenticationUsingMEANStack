@@ -4,7 +4,7 @@
  */
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
-const config = require('../models/database');
+const config = require('../config/database');
 
 //User Schema
 const UserSchema = mongoose.Schema({
@@ -34,4 +34,17 @@ module.exports.getUserById = function(id, callback) {
 module.exports.getUserByUsername = function(username, callback) {
     const query = {username: username};
     User.findOne(query, callback);
+}
+
+//define and export function to add user to db. addUser also
+//hashes the password before adding it to the database.
+module.exports.addUser = function(newUser, callback) {
+    //where 10 is the number rounds to user. 10 is default value
+    bcrypt.genSalt(10, (err, salt) => {
+        bcrypt.hash(newUser.password, salt, (err, hash) => {
+            if (err) throw err;
+            newUser.password = hash;
+            newUser.save(callback);
+        });
+    });
 }
