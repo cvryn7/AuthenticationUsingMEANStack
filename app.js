@@ -1,3 +1,4 @@
+//Import require modules
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -9,10 +10,16 @@ const app = express();
 
 const port = 3000;
 
+//Add CORS middleware to express
+app.use(cors);
+
+//Define a get route for home
 app.get('/', (req, res) => {
     res.send('Invalid Endpoint');
 })
 
+
+//Start listening to the given port
 app.listen(port, ()=> {
     console.log('Server started on port ' + port);
 });
