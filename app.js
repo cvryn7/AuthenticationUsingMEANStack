@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const cors = require('cors');
+const cors = require('cors'); // [Cross Origin Resource Sharing] allows to make request to our apis from differnt domain names.
 const passport = require('passport');
 const mongosse = require('mongoose');
 
