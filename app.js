@@ -21,6 +21,9 @@ app.use(bodyParser.json());
 //Anything at url <hostname>/users/<Anypath> goes to users file under routes.
 app.use('/users', users);
 
+// Set static folder to serve static file for the application
+app.use(express.static(path.join(__dirname, 'public')));
+
 //Define a get route for home
 app.get('/', (req, res) => {
     res.send('Invalid Endpoint');
