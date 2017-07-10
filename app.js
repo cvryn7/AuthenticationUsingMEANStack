@@ -4,7 +4,16 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors'); // [Cross Origin Resource Sharing] allows to make request to our apis from differnt domain names.
 const passport = require('passport');
-const mongosse = require('mongoose');
+const mongoose = require('mongoose');
+const config = require('./config/database'); // mongodb connection configuration
+
+//Connecting to mongo
+//useMongoClient option is set to true inorder to remove the deprecation warning.
+mongoose.connect(config.database, { useMongoClient: true });
+
+mongoose.connection.on('connected', () => {
+    console.log('Connected to database: ' + config.database);
+});
 
 const app = express();
 
