@@ -9,7 +9,7 @@ const router = express.Router();
 
 //Register
 //here we don't need to put /users/regesters, its handled by the express.
-router.get('/register', (req, res, next) => {
+router.post('/register', (req, res, next) => {
     res.send('REGISTER');
 });
 

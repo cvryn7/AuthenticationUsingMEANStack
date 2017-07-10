@@ -21,6 +21,7 @@ mongoose.connection.on('error', (err) => {
     console.log('Database error: ' + err);
 });
 
+// Initializing express
 const app = express();
 
 const port = 3000;
