@@ -1,0 +1,11 @@
+{
+  "name": "authentication_using_mean_stack",
+  "version": "1.0.0",
+  "description": "Authentication Web Application using MEAN stack",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
