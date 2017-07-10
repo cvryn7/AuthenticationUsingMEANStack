@@ -20,3 +20,18 @@ const UserSchema = mongoose.Schema({
        required: true
     }
 });
+
+const User = module.exports = mongoose.model('User', UserSchema);
+
+//Define function to query User db
+
+//define and export function to find user by id
+module.exports.getUserById = function(id, callback) {
+    User.findById(id, callback);
+}
+
+//define and export function to find user by username
+module.exports.getUserByUsername = function(username, callback) {
+    const query = {username: username};
+    User.findOne(query, callback);
+}
