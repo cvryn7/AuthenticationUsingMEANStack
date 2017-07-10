@@ -11,8 +11,14 @@ const config = require('./config/database'); // mongodb connection configuration
 //useMongoClient option is set to true inorder to remove the deprecation warning.
 mongoose.connect(config.database, { useMongoClient: true });
 
+//On Connection
 mongoose.connection.on('connected', () => {
     console.log('Connected to database: ' + config.database);
+});
+
+//In case of DB connection error
+mongoose.connection.on('error', (err) => {
+    console.log('Database error: ' + err);
 });
 
 const app = express();
