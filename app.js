@@ -13,13 +13,15 @@ const port = 3000;
 //Add CORS middleware to express
 app.use(cors);
 
+//Body parser middlerware
+app.use(bodyParser.json());
+
 //Define a get route for home
 app.get('/', (req, res) => {
     res.send('Invalid Endpoint');
 })
 
-
-//Start listening to the given port
+//Start server listening to the given port
 app.listen(port, ()=> {
     console.log('Server started on port ' + port);
 });
