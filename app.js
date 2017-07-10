@@ -10,11 +10,16 @@ const app = express();
 
 const port = 3000;
 
+const users = require('./routes/users');
+
 //Add CORS middleware to express
-app.use(cors);
+app.use(cors());
 
 //Body parser middlerware
 app.use(bodyParser.json());
+
+//Anything at url <hostname>/users/<Anypath> goes to users file under routes.
+app.use('/users', users);
 
 //Define a get route for home
 app.get('/', (req, res) => {
