@@ -41,6 +41,7 @@ router.post('/authenticate', (req, res, next) => {
         if (!user) {
             return res.json({success: false, msg: 'User not found'});
         }
+        //compare the password and if successfull, issue a token
         User.comparePassword(password, user.password, (err, isMatch) => {
            if (err) throw err;
            if (isMatch) {
@@ -66,8 +67,8 @@ router.post('/authenticate', (req, res, next) => {
 });
 
 //User Profile
-router.get('/profile', (req, res, next) => {
-    res.send('PROFILE');
+router.get('/profile', passport.authenticate('jwt', {session: false}), (req, res, next) => {
+    res.json({user: req.user});
 });
 
 //It is important to export the router to made it available for the express app defined in app.js
