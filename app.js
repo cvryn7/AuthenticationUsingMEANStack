@@ -34,6 +34,13 @@ app.use(cors());
 //Body parser middlerware
 app.use(bodyParser.json());
 
+//Passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+//passport is in paranthesis because we are passing passport in to the config
+require('./config/passport')(passport);
+
 //Anything at url <hostname>/users/<Anypath> goes to users file under routes.
 app.use('/users', users);
 
