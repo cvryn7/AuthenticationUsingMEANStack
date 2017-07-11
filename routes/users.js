@@ -35,7 +35,7 @@ router.post('/register', (req, res, next) => {
 router.post('/authenticate', (req, res, next) => {
     const username = req.body.username;
     const password = req.body.password;
-
+    console.log(username);
     User.getUserByUsername(username, (err, user) => {
         if (err) throw err;
         if (!user) {
@@ -51,7 +51,7 @@ router.post('/authenticate', (req, res, next) => {
 
                res.json({
                    success: true,
-                   token: 'JWT' + token,
+                   token: 'JWT ' + token,
                    user: {
                        id: user._id,
                        name: user.name,

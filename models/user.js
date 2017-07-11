@@ -53,6 +53,7 @@ module.exports.addUser = function(newUser, callback) {
     });
 }
 
+//Compare the user entered password with the user's saved password for authenticationg
 module.exports.comparePassword = (candidatePassword, hash, callback) => {
     bcrypt.compare(candidatePassword, hash, (err, isMatch) => {
         if (err) throw err;
