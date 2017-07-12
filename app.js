@@ -24,7 +24,8 @@ mongoose.connection.on('error', (err) => {
 // Initializing express
 const app = express();
 
-const port = 3000;
+//this port configuration is reguired for deployment on heroku
+const port = process.env.PORT || 8080;
 
 const users = require('./routes/users');
 
@@ -50,6 +51,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Define a get route for home
 app.get('/', (req, res) => {
     res.send('Invalid Endpoint');
+})
+
+app.get('*', (req, res) => {
+    res.redirect('/');
 })
 
 //Start server listening to the given port
