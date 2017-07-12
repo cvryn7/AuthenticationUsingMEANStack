@@ -11,11 +11,11 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-left">
-        <li><a [routerLink]="['/']">Home</a></li>
+        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/']">Home</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a [routerLink]="['/login']">login</a></li>
-        <li><a [routerLink]="['/register']">register</a></li>
+        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/login']">login</a></li>
+        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/register']">register</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
