@@ -6,8 +6,8 @@
 <p>Steps to run application locally</p>
 <ul>
 <li>Clone this git repo</li>
-<li>Edit the AuthenticationUsingMeanStack/config/database.js file's database key to your local mongodb connection string (if you are not sure which connection string then look my commit with "Changed mongo server to mlab
-" and id "f942c9ed6f066fe8c182d882f931726bd9d7184e")</li>
+<li>Edit the AuthenticationUsingMeanStack/config/database.js file's database key to your local mongodb connection string (if you are not sure which connection string then checkout this commit:
+https://github.com/cvryn7/AuthenticationUsingMEANStack/commit/f942c9ed6f066fe8c182d882f931726bd9d7184e</li>
 <li>Navigate to the project root</li>
 <li>run <code>npm install</code>
 <li>run <code>npm start</code>
