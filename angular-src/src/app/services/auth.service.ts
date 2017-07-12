@@ -28,6 +28,15 @@ export class AuthService {
       .map(res => res.json());
   }
 
+  getProfile() {
+    let headers = new Headers();
+    this.loadToken();
+    headers.append('Authorization', this.authToken);
+    headers.append('Content-Type', 'application/json');
+    return this.http.get('http://localhost:3000/users/profile', {headers: headers})
+      .map(res => res.json());
+  }
+
   storeUserData(token, user) {
     //angular jwt looks for id_token key in the storage automatically for the validation
     localStorage.setItem('id_token', token);
@@ -35,6 +44,11 @@ export class AuthService {
     localStorage.setItem('user', JSON.stringify(user));
     this.authToken = token;
     this.user = user;
+  }
+
+  loadToken() {
+    const token = localStorage.getItem('id_token');
+    this.authToken = token;
   }
 
   logout() {
