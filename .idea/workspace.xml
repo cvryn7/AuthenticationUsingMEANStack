@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a28a8cb-6125-4b0a-b979-e94ee40da88e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/navbar/navbar.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/navbar/navbar.component.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -75,8 +76,8 @@
       <file leaf-file-name="navbar.component.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/navbar/navbar.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+            <state relative-caret-position="272">
+              <caret line="16" column="15" lean-forward="true" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -416,12 +417,12 @@
       <workItem from="1499718050740" duration="4475000" />
       <workItem from="1499722614960" duration="11301000" />
       <workItem from="1499785825697" duration="6159000" />
-      <workItem from="1499813522365" duration="3011000" />
+      <workItem from="1499813522365" duration="3336000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24946000" />
+    <option name="totallyTimeSpent" value="25271000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -716,8 +717,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/navbar/navbar.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        <state relative-caret-position="272">
+          <caret line="16" column="15" lean-forward="true" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
           <folding />
         </state>
       </provider>
