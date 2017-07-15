@@ -1,5 +1,5 @@
 <h1>Authentication application using MEAN </h1>
-<p>Link to the application demo: https://sheltered-cliffs-43802.herokuapp.com/</p>
+<p>Link to the application demo: https://authentication-app-using-mean.herokuapp.com/</p>
 <p>This is a minimal application built for learning Mongo, Express, Angular and Node</p>
 <p>I followed the video tutorial available here: https://www.youtube.com/watch?v=uONz0lEWft0</p>
 <hr/>
